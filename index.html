@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skincare Product Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Skincare Product Survey</h2>
+        <form id="skincareForm">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="usedProducts">Have you ever used any skincare products?</label>
+                <select id="usedProducts" name="usedProducts" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferredProducts">Which one do you use/prefer?</label>
+                <input type="text" id="preferredProducts" name="preferredProducts">
+            </div>
+
+            <div class="form-group">
+                <label for="dailyProduct">Is there any product you use on a daily basis for skincare?</label>
+                <input type="text" id="dailyProduct" name="dailyProduct">
+            </div>
+
+            <div class="form-group">
+                <label for="additionalPoints">Would you like to share any other points regarding the topic of skincare?</label>
+                <textarea id="additionalPoints" name="additionalPoints"></textarea>
+            </div>
+
+            <!-- Hidden fields for capturing latitude and longitude -->
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="thankYouMessage" class="thank-you hidden">
+        <h2>Thank you for your response!</h2>
+        <p>Your input has been successfully recorded.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
