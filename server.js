@@ -9,7 +9,7 @@ app.use(express.static(__dirname));
 
 app.post('/submit', (req, res) => {
     const { name, latitude, longitude } = req.body;
-    const data = Name: ${name}, Latitude: ${latitude}, Longitude: ${longitude}\n;
+    const data = `Name: ${name}, Latitude: ${latitude}, Longitude: ${longitude}\n`;
 
     console.log(data);
 
@@ -18,11 +18,11 @@ app.post('/submit', (req, res) => {
             console.error('Error saving location data:', err);
             res.send('Error saving your data.');
         } else {
-            res.send(Thank you, ${name}. We have captured your location.);
+            res.send(`Thank you, ${name}. We have captured your location.`);
         }
     });
 });
 
 app.listen(port, () => {
-    console.log(Server is running on port ${port});
+    console.log(`Server is running on port ${port}`);
 });
